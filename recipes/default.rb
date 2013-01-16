@@ -28,7 +28,8 @@ bash "install_geos_#{geos_version}" do
     cd #{untar_dir} && \
     tar xvf /tmp/#{tarball} && \
     cd geos-#{geos_version} && \
-    ./configure && make && make install
+    ./configure && make && make install && \
+    ldconfig
   EOH
   command ""
   creates untar_dir + "/geos-#{geos_version}"
