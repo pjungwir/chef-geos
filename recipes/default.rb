@@ -12,7 +12,7 @@ end
 geos_version = node['geos']['version']
 tarball = "geos-#{geos_version}.tar"
 tarball_bz2 = "geos-#{geos_version}.tar.bz2"
-remote_file "/tmp/#{tarball}" do
+remote_file "/tmp/#{tarball_bz2}" do
   source "http://download.osgeo.org/geos/#{tarball_bz2}"
   mode "0644"
   action :create_if_missing
