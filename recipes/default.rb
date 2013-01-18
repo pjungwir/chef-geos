@@ -32,7 +32,7 @@ bash "install_geos_#{geos_version}" do
     ldconfig
   EOH
   command ""
-  creates untar_dir + "/geos-#{geos_version}"
+  creates "/usr/local/bin/geos-config"
   action :run
 end
 
