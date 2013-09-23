@@ -7,20 +7,25 @@ Installs the [Geometry Engine, Open Source (GEOS)](http://trac.osgeo.org/geos/) 
 Tested on:
 
 * Ubuntu 12.04
+* Debian 7.1 
 
 ## Recipes:
 
-* `default.rb` - Downloads, builds, and installs GEOS from source.
+* `default.rb` - determines whether ```package.rb``` or ```source.rb``` should be run
 
 ## Attributes
 
-* `node['geos']['version']` - the version of GEOS to use.
+* `node['geos']['version']` - the version of GEOS to use
+  * if this is set, geos will be installed from source
+  * if this is not set, geos will be install from package
 
 
 License and Author
 ==================
 
 Author:: Paul A. Jungwirth (<pj@illuminatedcomputing.com>)
+
+Contributors:: Steven T. Dunlap (steven@roadtrippers.com)
 
 Copyright:: 2013, Illuminated Computing Inc.
 
