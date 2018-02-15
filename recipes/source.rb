@@ -31,7 +31,6 @@ bash "install_geos_#{geos_version}" do
     ./configure && make && make install && \
     ldconfig
   EOH
-  command ""
   creates "/usr/local/bin/geos-config"
   action :run
 end
